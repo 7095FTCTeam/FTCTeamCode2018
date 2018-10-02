@@ -21,19 +21,14 @@ import com.qualcomm.robotcore.hardware.IntegratingGyroscope;
 public class TeleOp1 extends OpMode{
 
     DcMotor leftDrive1;
-    DcMotor leftDrive2;
     DcMotor rightDrive1;
-    DcMotor rightDrive2;
 
     public void init(){
 
         leftDrive1 = hardwareMap.dcMotor.get("leftDrive1");
-        leftDrive2 = hardwareMap.dcMotor.get("leftDrive2");
         rightDrive1 = hardwareMap.dcMotor.get("rightDrive1");
-        rightDrive2 = hardwareMap.dcMotor.get("rightDrive2");
 
         rightDrive1.setDirection(DcMotor.Direction.REVERSE);
-        rightDrive2.setDirection(DcMotor.Direction.REVERSE);
 
     }
     public void loop(){
@@ -43,9 +38,7 @@ public class TeleOp1 extends OpMode{
         float left = gamepad1.left_stick_y;
 
         leftDrive1.setPower(.5*left);
-        leftDrive2.setPower(.5*left);
         rightDrive1.setPower(.5*right);
-        rightDrive2.setPower(.5*right);
 
     }
     public void stop(){
