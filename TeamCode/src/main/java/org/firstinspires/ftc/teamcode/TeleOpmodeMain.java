@@ -55,7 +55,6 @@ import org.firstinspires.ftc.teamcode.ModernRoboticsI2cColorSensor2.ModernRoboti
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
 */
 
-@TeleOp(name="TeleOp", group="Pushbot")
 
 public class TeleOpmodeMain extends OpMode{
 
